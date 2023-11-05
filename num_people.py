@@ -117,6 +117,7 @@ def people_transit_matrix(coord_list):
             transit_matrix[i].append(people_on_lanes[i * len(coord_list) + j])
     return transit_matrix
 
+# looping in this way to make sure we have parity with coordinates
 example_coord_csv = pd.read_csv('heatmaps/37.712016_-122.38448100000006.csv')
 example_coord_csv = example_coord_csv[['Latitude', 'Longitude']]
 
